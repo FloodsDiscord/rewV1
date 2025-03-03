@@ -1,12 +1,197 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
+local Main = Instance.new("ScreenGui")
+local bg = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local Toggle = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local Size = Instance.new("TextBox")
+local TextLabel_3 = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
-]]--
+Main.Name = "Main"
+Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=math.ldexp;local v9=getfenv or function() return _ENV;end ;local v10=setmetatable;local v11=pcall;local v12=select;local v13=unpack or table.unpack ;local v14=tonumber;local function v15(v16,v17,...) local v18=1;local v19;v16=v4(v3(v16,5),"..",function(v30) if (v1(v30,2)==81) then local v83=0;while true do if (v83==0) then v19=v0(v3(v30,1,1));return "";end end else local v84=0;local v85;while true do if (v84==0) then v85=v2(v0(v30,16));if v19 then local v100=0;local v101;while true do if (v100==1) then return v101;end if (v100==0) then v101=v5(v85,v19);v19=nil;v100=1;end end else return v85;end break;end end end end);local function v20(v31,v32,v33) if v33 then local v86=0 -0 ;local v87;while true do if (v86==(0 -0)) then v87=(v31/(((3 + 0) -(1 -0))^(v32-((1067 -(68 + 997)) -1))))%(2^(((v33-(620 -(555 + 64))) -(v32-1)) + (932 -((2127 -(226 + 1044)) + 74)))) ;return v87-(v87%(569 -(367 + 201))) ;end end else local v88=927 -(214 + 713) ;local v89;while true do if (v88==(0 + 0)) then v89=2^(v32-(1 + 0)) ;return (((v31%(v89 + v89))>=v89) and (878 -(282 + 595))) or (1637 -(1523 + 114)) ;end end end end local function v21() local v34=v1(v16,v18,v18);v18=v18 + 1 ;return v34;end local function v22() local v35=0 -0 ;local v36;local v37;while true do if (v35==(118 -(32 + (157 -72)))) then return (v37 * (251 + 5)) + v36 ;end if (v35==(0 + 0)) then v36,v37=v1(v16,v18,v18 + ((1759 -800) -(892 + 65)) );v18=v18 + 2 ;v35=(352 -(87 + 263)) -1 ;end end end local function v23() local v38=(132 + 48) -(67 + 113) ;local v39;local v40;local v41;local v42;while true do if (v38==(0 + 0)) then v39,v40,v41,v42=v1(v16,v18,v18 + (7 -(1001 -(915 + 82))) );v18=v18 + 4 ;v38=1 + 0 ;end if (v38==(3 -(5 -3))) then return (v42 * (16778168 -(802 + 150))) + (v41 * (176444 -110908)) + (v40 * (464 -208)) + v39 ;end end end local function v24() local v43=v23();local v44=v23();local v45=1 + 0 ;local v46=(v20(v44,1 -0 ,1207 -(1069 + 118) ) * ((4 -2)^(69 -37))) + v43 ;local v47=v20(v44,4 + 17 ,54 -23 );local v48=((v20(v44,32 + 0 )==(792 -(368 + 423))) and  -1) or ((2 + 1) -2) ;if (v47==((15 + 3) -(10 + 8))) then if (v46==(0 -0)) then return v48 * 0 ;else v47=773 -(201 + 571) ;v45=442 -(416 + (1164 -(116 + 1022))) ;end elseif (v47==(6535 -4488)) then return ((v46==(0 + 0)) and (v48 * ((1 -(0 -0))/(438 -((1004 -(814 + 45)) + 293))))) or (v48 * NaN) ;end return v8(v48,v47-((3580 -2127) -(44 + 386)) ) * (v45 + (v46/((1488 -((4154 -3156) + 488))^(17 + 35)))) ;end local function v25(v49) local v50;if  not v49 then local v90=0 + 0 ;while true do if ((1080 -(1020 + 60))==v90) then v49=v23();if (v49==(1423 -(630 + 793))) then return "";end break;end end end v50=v3(v16,v18,(v18 + v49) -(1 + 0) );v18=v18 + v49 ;local v51={};for v66=886 -(261 + 246 + 378) , #v50 do v51[v66]=v2(v1(v3(v50,v66,v66)));end return v6(v51);end local v26=v23;local function v27(...) return {...},v12("#",...);end local function v28() local v52=(function() return 0;end)();local v53=(function() return;end)();local v54=(function() return;end)();local v55=(function() return;end)();local v56=(function() return;end)();local v57=(function() return;end)();local v58=(function() return;end)();local v59=(function() return;end)();while true do local v68=(function() return 0 -0 ;end)();while true do if (v68==(0 -0)) then if (v52==(286 -(134 + 151))) then local v98=(function() return 1665 -(970 + 695) ;end)();while true do if (v98==(0 -0)) then v57=(function() return {v54,v55,nil,v56};end)();v58=(function() return v23();end)();v98=(function() return 1;end)();end if (v98==1) then v59=(function() return {};end)();for v111= #"/",v58 do local v112=(function() return 0 -0 ;end)();local v113=(function() return;end)();local v114=(function() return;end)();local v115=(function() return;end)();while true do if (v112==1) then v115=(function() return nil;end)();while true do if (v113==1) then if (v114== #"}") then v115=(function() return v21()~=0 ;end)();elseif (v114==(2 -0)) then v115=(function() return v24();end)();elseif (v114== #"xxx") then v115=(function() return v25();end)();end v59[v111]=(function() return v115;end)();break;end if (v113==0) then local v152=(function() return 0;end)();while true do if (v152~=0) then else v114=(function() return v21();end)();v115=(function() return nil;end)();v152=(function() return 3 -2 ;end)();end if (v152~=1) then else v113=(function() return 1;end)();break;end end end end break;end if (v112~=0) then else v113=(function() return 1824 -(1195 + 629) ;end)();v114=(function() return nil;end)();v112=(function() return 1 -0 ;end)();end end end v98=(function() return 2;end)();end if ((243 -(187 + 54))==v98) then v52=(function() return 782 -(162 + 618) ;end)();break;end end end if (v52==(2 + 0)) then v57[ #"gha"]=(function() return v21();end)();for v102= #"|",v23() do local v103=(function() return 0 + 0 ;end)();local v104=(function() return;end)();while true do if (v103==0) then v104=(function() return v21();end)();if (v20(v104, #"|", #":")==0) then local v132=(function() return 0;end)();local v133=(function() return;end)();local v134=(function() return;end)();local v135=(function() return;end)();while true do if (v132~=(1 -0)) then else local v147=(function() return 0 -0 ;end)();local v148=(function() return;end)();while true do if (v147==(0 + 0)) then v148=(function() return 1636 -(1373 + 263) ;end)();while true do if (v148~=(1001 -(451 + 549))) then else v132=(function() return 2;end)();break;end if (v148==0) then local v156=(function() return 0;end)();while true do if ((1 + 0)==v156) then v148=(function() return 1;end)();break;end if (v156==0) then v135=(function() return {v22(),v22(),nil,nil};end)();if (v133==0) then local v157=(function() return 0;end)();local v158=(function() return;end)();while true do if (v157~=(0 -0)) then else v158=(function() return 1384 -(746 + 638) ;end)();while true do if (v158==(0 + 0)) then v135[ #"91("]=(function() return v22();end)();v135[ #"xnxx"]=(function() return v22();end)();break;end end break;end end elseif (v133== #" ") then v135[ #"91("]=(function() return v23();end)();elseif (v133==(2 -0)) then v135[ #"-19"]=(function() return v23() -(2^(357 -(218 + 123))) ;end)();elseif (v133~= #"nil") then else local v163=(function() return 0;end)();local v164=(function() return;end)();while true do if (v163~=0) then else v164=(function() return 0;end)();while true do if (v164==0) then v135[ #"91("]=(function() return v23() -((1583 -(1535 + 46))^(16 + 0)) ;end)();v135[ #"xnxx"]=(function() return v22();end)();break;end end break;end end end v156=(function() return 1 + 0 ;end)();end end end end break;end end end if (2~=v132) then else if (v20(v134, #"|", #" ")== #"!") then v135[2]=(function() return v59[v135[562 -(306 + 254) ]];end)();end if (v20(v134,1 + 1 ,3 -1 )== #":") then v135[ #"xnx"]=(function() return v59[v135[ #"nil"]];end)();end v132=(function() return 1470 -(899 + 568) ;end)();end if ((2 + 1)==v132) then if (v20(v134, #"19(", #"91(")~= #"{") then else v135[ #"0836"]=(function() return v59[v135[ #"?id="]];end)();end v54[v102]=(function() return v135;end)();break;end if (v132~=(0 -0)) then else local v150=(function() return 0;end)();while true do if (v150~=1) then else v132=(function() return 604 -(268 + 335) ;end)();break;end if (v150==0) then v133=(function() return v20(v104,292 -(60 + 230) , #"xxx");end)();v134=(function() return v20(v104, #"0313",6);end)();v150=(function() return 573 -(426 + 146) ;end)();end end end end end break;end end end for v105= #":",v23() do v55,v105,v28=(function() return v53(v55,v105,v28);end)();end return v57;end v68=(function() return 1 + 0 ;end)();end if ((1457 -(282 + 1174))==v68) then if (v52~=(811 -(569 + 242))) then else v53=(function() return function(v106,v107,v108) local v109=(function() return 0;end)();local v110=(function() return;end)();while true do if (v109==(0 -0)) then v110=(function() return 0 + 0 ;end)();while true do if (v110==(1024 -(706 + 318))) then v106[v107-#"{" ]=(function() return v108();end)();return v106,v107,v108;end end break;end end end;end)();v54=(function() return {};end)();v55=(function() return {};end)();v56=(function() return {};end)();v52=(function() return 1252 -(721 + 530) ;end)();end break;end end end end local function v29(v60,v61,v62) local v63=v60[1258 -(1043 + 214) ];local v64=v60[(3 + 4) -5 ];local v65=v60[1274 -(945 + 189 + 137) ];return function(...) local v69=v63;local v70=v64;local v71=v65;local v72=v27;local v73=2 -1 ;local v74= -((1 -0) + 0);local v75={};local v76={...};local v77=v12("#",...) -(1 + 0) ;local v78={};local v79={};for v91=1500 -(1408 + (173 -81)) ,v77 do if (v91>=v71) then v75[v91-v71 ]=v76[v91 + (1087 -(461 + 625)) ];else v79[v91]=v76[v91 + (1289 -(993 + 295)) ];end end local v80=(v77-v71) + (1505 -(363 + 1141)) + 0 ;local v81;local v82;while true do v81=v69[v73];v82=v81[(1581 -(1183 + 397)) + 0 ];if (v82<=(1180 -((1272 -854) + 753))) then if (v82<=4) then if (v82<=(1 + 0)) then if ((v82>(0 + 0)) or (55==2387)) then v79[v81[1 + 1 + 0 ]]={};else for v130=v81[2],v81[1 + 2 ] do v79[v130]=nil;end end elseif ((1454<2491) and (v82<=2)) then v79[v81[1 + 1 ]]=v62[v81[532 -(406 + (361 -(64 + 174))) ]];elseif ((v82==((97 + 32) -(116 + 10))) or (4157<=2803)) then for v144=v81[(1976 -(1913 + 62)) + 1 ],v81[741 -(542 + 196) ] do v79[v144]=nil;end else do return;end end elseif (v82<=(12 -6)) then if (v82>(1774 -(1749 + 20))) then v79[v81[1 + 1 + 0 ]]=v79[v81[1 + 2 ]];else v73=v81[2 + 1 ];end elseif (v82<=(1329 -(1249 + 73))) then v79[v81[(2 -1) + 1 ]]=v81[1148 -(466 + 679) ];elseif ((4853>=2982) and (v82==(19 -11))) then v73=v81[(1941 -(565 + 1368)) -5 ];else local v137=v81[1902 -(106 + 1794) ];v79[v137]=v79[v137](v79[v137 + 1 + 0 ]);end elseif (v82<=(4 + 10)) then if ((4134>3357) and (v82<=(32 -21))) then if (v82>((101 -74) -17)) then v79[v81[116 -(4 + 110) ]]=v81[587 -(57 + 527) ];elseif (v79[v81[1429 -(41 + 1386) ]]==v81[4 + 0 ]) then v73=v73 + ((153 -49) -(17 + 86)) ;else v73=v81[2 + (1 -0) ];end elseif (v82<=(6 + 0 + 6)) then v79[v81[(338 -(144 + 192)) + 0 ]]=v62[v81[6 -3 ]];elseif (v82==(37 -24)) then do return;end else v79[v81[4 -(218 -(42 + 174)) ]]=v79[v81[169 -(122 + 44) ]];end elseif ((v82<=(27 -11)) or (3417<2534)) then if ((v82==(49 -34)) or (2722<=164)) then v79[v81[2]]();else local v128=v81[1 + 1 ];v79[v128]=v79[v128](v79[v128 + 1 + (856 -(564 + 292)) ]);end elseif (v82<=17) then if (v79[v81[2]]==v81[6 -2 ]) then v73=v73 + 1 + 0 ;else v73=v81[1 + 2 ];end elseif ((v82>(42 -24)) or (2408<2109)) then v79[v81[3 -(1 + 0) ]]();else v79[v81[67 -(30 + 35) ]]={};end v73=v73 + 1 + 0 + 0 ;end end;end return v29(v28(),{},v17)(...);end return v15("LOL!043Q00028Q00026Q00F03F0325132Q004Q206C6F63616C20506C6179657273203D2067616D653A476574536572766963652822506C617965727322290A4Q206C6F63616C2055736572496E70757453657276696365203D2067616D653A47657453657276696365282255736572496E7075745365727669636522290A4Q206C6F63616C2052756E53657276696365203D2067616D653A47657453657276696365282252756E5365727669636522290A4Q206C6F63616C2043616D657261203D2067616D652E576F726B73706163652E43752Q72656E7443616D6572610A4Q206C6F63616C204C6F63616C506C61796572203D20506C61796572732E4C6F63616C506C617965720A4Q206C6F63616C204D6F757365203D204C6F63616C506C617965723A4765744D6F75736528290A4Q206C6F63616C2041696D6C6F636B546172676574203D206E696C0A4Q206C6F63616C2041696D6C6F636B456E61626C6564203D2066616C73650A4Q206C6F63616C206C617374506F736974696F6E203D206E696C2Q0A4Q206C6F63616C2066756E6374696F6E20497357686974656C697374656428706C61796572290A8Q20666F72205F2C206E616D6520696E2069706169727328436F6E6669672E57686974656C6973742920646F0A9Q203Q20696620706C617965722E4E616D65202Q3D206E616D65207468656E2072657475726E207472756520656E640A8Q20656E640A8Q2072657475726E2066616C73650A4Q20656E642Q0A4Q206C6F63616C2066756E6374696F6E20476574506C6179657250696E6728290A8Q206C6F63616C207374617473203D204C6F63616C506C617965723A46696E6446697273744368696C642822537461747322290A8Q20696620737461747320616E642073746174733A46696E6446697273744368696C64282250696E672229207468656E0A9Q203Q2072657475726E2073746174732E50696E672E56616C7565202F20313Q300A8Q20656E640A8Q2072657475726E20302E30350A4Q20656E642Q0A4Q206C6F63616C2066756E6374696F6E2047657456656C6F6369747928706C61796572290A8Q206C6F63616C2068756D616E6F6964522Q6F7450617274203D20706C617965722E43686172616374657220616E6420706C617965722E4368617261637465723A46696E6446697273744368696C64282248756D616E6F6964522Q6F745061727422290A8Q2069662068756D616E6F6964522Q6F745061727420616E64206C617374506F736974696F6E207468656E0A9Q203Q206C6F63616C2064656C7461506F736974696F6E203D2068756D616E6F6964522Q6F74506172742E506F736974696F6E202D206C617374506F736974696F6E0A9Q203Q206C617374506F736974696F6E203D2068756D616E6F6964522Q6F74506172742E506F736974696F6E0A9Q203Q2072657475726E2064656C7461506F736974696F6E0A8Q20656E640A8Q206C617374506F736974696F6E203D20706C617965722E43686172616374657220616E6420706C617965722E4368617261637465723A46696E6446697273744368696C64282248756D616E6F6964522Q6F7450617274222920616E6420706C617965722E4368617261637465722E48756D616E6F6964522Q6F74506172742E506F736974696F6E0A8Q2072657475726E20566563746F72332E6E657728302C20302C2030290A4Q20656E642Q0A4Q206C6F63616C2066756E6374696F6E2047657450726564696374696F6E28290A8Q20696620436F6E6669672E4175746F50726564696374696F6E207468656E0A9Q203Q206C6F63616C2070696E67203D20476574506C6179657250696E6728290A9Q203Q206C6F63616C2076656C6F63697479203D2047657456656C6F636974792841696D6C6F636B546172676574290A9Q203Q2072657475726E2076656C6F636974792E4D61676E6974756465202A20436F6E6669672E50726564696374696F6E466163746F72202B2070696E67202A20436F6E6669672E50696E6741646A7573746D656E74466163746F720A8Q20656C73650A9Q203Q2072657475726E20436F6E6669672E50726564696374696F6E2E580A8Q20656E640A4Q20656E642Q0A4Q206C6F63616C2066756E6374696F6E20476574436C6F7365737456697369626C65506C6179657228290A8Q206C6F63616C20636C6F73657374506C617965722C2073686F727465737444697374616E6365203D206E696C2C206D6174682E687567650A8Q20666F72205F2C20706C6179657220696E20706169727328506C61796572733A476574506C6179657273282Q2920646F0A9Q203Q20696620706C61796572207E3D204C6F63616C506C6179657220616E6420706C617965722E43686172616374657220616E6420706C617965722E4368617261637465723A46696E6446697273744368696C64282248756D616E6F6964522Q6F7450617274222920616E64206E6F7420497357686974656C697374656428706C6179657229207468656E0A9Q207Q206C6F63616C20746172676574506F732C206F6E5363722Q656E203D2043616D6572613A576F726C64546F56696577706F7274506F696E7428706C617965722E4368617261637465722E48756D616E6F6964522Q6F74506172742E506F736974696F6E290A9Q207Q206C6F63616C2064697374616E6365203D2028566563746F72322E6E657728746172676574506F732E582C20746172676574506F732E5929202D20566563746F72322E6E6577284D6F7573652E582C204D6F7573652E592Q292E4D61676E69747564652Q0A9Q207Q206966206F6E5363722Q656E20616E642064697374616E6365203C2073686F727465737444697374616E6365207468656E0A9Q209Q202Q206C6F63616C20726179203D205261792E6E65772843616D6572612E434672616D652E506F736974696F6E2C2028706C617965722E4368617261637465722E48756D616E6F6964522Q6F74506172742E506F736974696F6E202D2043616D6572612E434672616D652E506F736974696F6E292E756E6974202A20313Q30290A9Q209Q202Q206C6F63616C2068697450617274203D20776F726B73706163653A46696E64506172744F6E526179287261792C204C6F63616C506C617965722E436861726163746572290A9Q209Q202Q206966206869745061727420616E6420686974506172743A497344657363656E64616E744F6628706C617965722E43686172616374657229207468656E0A9Q209Q206Q2073686F727465737444697374616E6365203D2064697374616E63650A9Q209Q206Q20636C6F73657374506C61796572203D20706C617965720A9Q209Q202Q20656E640A9Q207Q20656E640A9Q203Q20656E640A8Q20656E640A8Q2072657475726E20636C6F73657374506C617965720A4Q20656E642Q0A4Q2055736572496E707574536572766963652E496E707574426567616E3A436F2Q6E6563742866756E6374696F6E28696E7075742C2067616D6550726F63652Q736564290A8Q206966206E6F742067616D6550726F63652Q73656420616E6420696E7075742E4B6579436F6465202Q3D20436F6E6669672E41696D6C6F636B4B6579207468656E0A9Q203Q2041696D6C6F636B456E61626C6564203D206E6F742041696D6C6F636B456E61626C65640A9Q203Q2041696D6C6F636B546172676574203D2041696D6C6F636B456E61626C656420616E6420476574436C6F7365737456697369626C65506C617965722829206F72206E696C0A8Q20656E640A4Q20656E64292Q0A4Q2052756E536572766963652E52656E6465725374652Q7065643A436F2Q6E6563742866756E6374696F6E28290A8Q2069662041696D6C6F636B456E61626C656420616E642041696D6C6F636B54617267657420616E642041696D6C6F636B5461726765742E43686172616374657220616E642041696D6C6F636B5461726765742E4368617261637465723A46696E6446697273744368696C64282248756D616E6F6964522Q6F74506172742229207468656E0A9Q203Q206C6F63616C2076656C6F63697479203D2047657456656C6F636974792841696D6C6F636B546172676574290A9Q203Q206C6F63616C2070726564696374696F6E203D2047657450726564696374696F6E28292Q0A9Q203Q206C6F63616C20636861726163746572203D2041696D6C6F636B5461726765742E4368617261637465720A9Q203Q206C6F63616C2068756D616E6F6964522Q6F7450617274203D206368617261637465722E48756D616E6F6964522Q6F74506172740A9Q203Q206C6F63616C20666F7277617264446972656374696F6E203D2068756D616E6F6964522Q6F74506172742E434672616D652E4C2Q6F6B566563746F722Q0A9Q203Q206C6F63616C20707265646963746564506F736974696F6E203D2068756D616E6F6964522Q6F74506172742E506F736974696F6E202B20666F7277617264446972656374696F6E202A2070726564696374696F6E202B2076656C6F63697479202A2070726564696374696F6E2Q0A9Q203Q206C6F63616C20646972656374696F6E203D2028707265646963746564506F736974696F6E202D2043616D6572612E434672616D652E506F736974696F6E292E756E69740A9Q203Q2043616D6572612E434672616D65203D2043616D6572612E434672616D653A4C65727028434672616D652E6E65772843616D6572612E434672616D652E506F736974696F6E2C2043616D6572612E434672616D652E506F736974696F6E202B20646972656374696F6E292C20302E31290A8Q20656E640A4Q20656E64292Q0A4Q20696620436F6E6669672E53696C656E7441696D207468656E0A8Q206C6F63616C206D74203D206765747261776D6574617461626C652867616D65290A8Q206C6F63616C206F6C64496E646578203D206D742E2Q5F696E6465780A8Q20736574726561646F6E6C79286D742C2066616C7365292Q0A8Q206D742E2Q5F696E646578203D206E65772Q636C6F737572652866756E6374696F6E2873656C662C206B6579290A9Q203Q206966206B6579202Q3D20224869742220616E642073656C663A49734128225261794F626A6563742229207468656E0A9Q207Q206C6F63616C20636C6F73657374203D20476574436C6F7365737456697369626C65506C6179657228290A9Q207Q20696620636C6F7365737420616E6420636C6F736573742E43686172616374657220616E6420636C6F736573742E4368617261637465723A46696E6446697273744368696C64282248756D616E6F6964522Q6F74506172742229207468656E0A9Q209Q202Q206C6F63616C2076656C6F63697479203D2047657456656C6F6369747928636C6F73657374290A9Q209Q202Q206C6F63616C2070726564696374696F6E203D2047657450726564696374696F6E28292Q0A9Q209Q202Q206C6F63616C2068756D616E6F6964522Q6F7450617274203D20636C6F736573742E4368617261637465722E48756D616E6F6964522Q6F74506172740A9Q209Q202Q206C6F63616C20666F7277617264446972656374696F6E203D2068756D616E6F6964522Q6F74506172742E434672616D652E4C2Q6F6B566563746F720A9Q209Q202Q2072657475726E2068756D616E6F6964522Q6F74506172742E506F736974696F6E202B20666F7277617264446972656374696F6E202A2070726564696374696F6E202B2076656C6F63697479202A2070726564696374696F6E0A9Q207Q20656E640A9Q203Q20656E640A9Q203Q2072657475726E206F6C64496E6465782873656C662C206B6579290A8Q20656E64292Q0A8Q20736574726561646F6E6C79286D742C2074727565290A4Q20656E640A030A3Q006C6F6164737472696E6700164Q00017Q001207000100014Q0003000200033Q0026110001000F000100020004053Q000F000100261100020005000100010004053Q00050001001207000300033Q001202000400044Q0006000500034Q00090004000200022Q000F0004000100010004053Q001500010004053Q000500010004053Q0015000100261100010003000100010004053Q00030001001207000200014Q0003000300033Q001207000100023Q0004053Q000300012Q000D3Q00017Q00",v9(),...);
+bg.Name = "bg"
+bg.Parent = Main
+bg.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+bg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bg.BorderSizePixel = 0
+bg.Position = UDim2.new(0.148112312, 0, 0.350746274, 0)
+bg.Size = UDim2.new(0.19731921, 0, 0.323383093, 0)
+
+Frame.Parent = bg
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 0.750
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0370373055, 0, 0.02734375, 0)
+Frame.Size = UDim2.new(0.938461483, 0, 0.941798925, 0)
+
+Toggle.Name = "Toggle"
+Toggle.Parent = bg
+Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.BorderSizePixel = 2
+Toggle.Position = UDim2.new(0.0985755697, 0, 0.148147941, 0)
+Toggle.Size = UDim2.new(0.104619458, 0, 0.0855447203, 0)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = ""
+Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.TextSize = 14.000
+
+Frame_2.Parent = bg
+Frame_2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0307687148, 0, 0.100529097, 0)
+Frame_2.Size = UDim2.new(0.96762687, 0, 0.0105820103, 0)
+
+TextLabel.Parent = bg
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.27692309, 0, 0.02734375, 0)
+TextLabel.Size = UDim2.new(0.360488445, 0, 0.0687830672, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "x.cc - hitbox expander"
+TextLabel.TextColor3 = Color3.fromRGB(213, 213, 213)
+TextLabel.TextSize = 12.000
+TextLabel.TextStrokeTransparency = 0.790
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = bg
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.146244168, 0, 0.162976667, 0)
+TextLabel_2.Size = UDim2.new(0.360488445, 0, 0.0687830672, 0)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Enable"
+TextLabel_2.TextColor3 = Color3.fromRGB(213, 213, 213)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextStrokeTransparency = 0.790
+TextLabel_2.TextWrapped = true
+
+Size.Name = "Size"
+Size.Parent = bg
+Size.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Size.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Size.Position = UDim2.new(0.0876541287, 0, 0.371706814, 0)
+Size.Size = UDim2.new(0.549757361, 0, 0.0889703184, 0)
+Size.Font = Enum.Font.SourceSans
+Size.Text = ""
+Size.TextColor3 = Color3.fromRGB(0, 0, 0)
+Size.TextSize = 14.000
+
+TextLabel_3.Parent = bg
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.177841634, 0, 0.302923709, 0)
+TextLabel_3.Size = UDim2.new(0.360488445, 0, 0.0687830672, 0)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Size"
+TextLabel_3.TextColor3 = Color3.fromRGB(213, 213, 213)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextStrokeTransparency = 0.790
+TextLabel_3.TextWrapped = true
+
+UIAspectRatioConstraint.Parent = bg
+UIAspectRatioConstraint.AspectRatio = 0.837
+
+local function ToggleScript()
+	local script = Instance.new('LocalScript', Toggle)
+	local HeadSize = 20
+	local IsDisabled = true
+	local IsTeamCheckEnabled = false
+	local button = script.Parent
+	local sizeTextBox = script.Parent.Parent:FindFirstChild("Size")
+	
+	button.MouseButton1Click:Connect(function()
+		IsDisabled = not IsDisabled
+		
+		if IsDisabled then
+			button.Text = "Enable Script"
+			button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		else
+			button.Text = "Disable Script"
+			button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+		end
+	end)
+	
+	game:GetService('RunService').RenderStepped:Connect(function()
+		if not IsDisabled then
+			local localPlayer = game:GetService('Players').LocalPlayer
+			if not localPlayer then return end
+	
+			local localPlayerTeam = localPlayer.Team
+			local sizeInput = tonumber(sizeTextBox.Text)
+			if sizeInput then
+				HeadSize = sizeInput
+			else
+				HeadSize = 20
+			end
+	
+			for _, player in ipairs(game:GetService('Players'):GetPlayers()) do
+				if player ~= localPlayer and (not IsTeamCheckEnabled or player.Team ~= localPlayerTeam) then
+					local character = player.Character
+					if character then
+						local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+						if humanoidRootPart then
+							humanoidRootPart.Size = Vector3.new(HeadSize, HeadSize, HeadSize)
+							humanoidRootPart.Transparency = 0.7
+							humanoidRootPart.BrickColor = BrickColor.new(Color3.fromRGB(255, 182, 193))
+							humanoidRootPart.Material = Enum.Material.SmoothPlastic
+							humanoidRootPart.CanCollide = false
+						end
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(ToggleScript)()
+
+local function MainScript()
+	local script = Instance.new('LocalScript', Main)
+	local player = game.Players.LocalPlayer
+	local screenGui = player:WaitForChild("PlayerGui"):WaitForChild("ScreenGui")
+	local frameName = "bg"
+	
+	local function createFrameIfNeeded()
+		local frame = screenGui:FindFirstChild(frameName)
+		if not frame then
+			frame = Instance.new("Frame")
+			frame.Name = frameName
+			frame.Parent = screenGui
+			frame.Size = UDim2.new(0, 200, 0, 200)
+			frame.Position = UDim2.new(0.5, -100, 0.5, -100)
+			frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			frame.Visible = true
+		end
+		return frame
+	end
+	
+	local function keepFrameVisible()
+		local frame = createFrameIfNeeded()
+		frame.Visible = true
+	end
+	
+	player.CharacterAdded:Connect(function(character)
+		character:WaitForChild("Humanoid").Died:Connect(function()
+			wait(0.5)
+			keepFrameVisible()
+		end)
+		keepFrameVisible()
+	end)
+	
+	keepFrameVisible()
+end
+coroutine.wrap(MainScript)()
